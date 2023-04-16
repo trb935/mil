@@ -5,183 +5,175 @@
 <body>
 
 <style>
-/* General Styles */
-html{
-   background:url(https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260) no-repeat;
-   background-size: cover;
-   height:100%;
-   background-color: #000;
-}
-* {
-   box-sizing:border-box;
-   -webkit-box-sizing:border-box;
-   -moz-box-sizing:border-box;
-   -webkit-font-smoothing:antialiased;
-   -moz-font-smoothing:antialiased;
-   -o-font-smoothing:antialiased;
-   font-smoothing:antialiased;
-   text-rendering:optimizeLegibility;
-}
-body {
-   color: #C0C0C0;
-   font-family: Arial, san-serif;
-}
+ #contact{
+    padding:10px 0 10px;
+  }
 
+  .contact-text{
+    margin:45px auto;
+  }
 
-/* Contact Form Styles */
-h1 {
-   margin: 10px 0 0 0;
-}
-h4{
-   margin: 0 0 20px 0;
-}
-#contact-form {
-   background-color:rgba(72,72,72,0.9);
-   padding: 10px 20px 30px 20px;
-   max-width:100%;
-   float: left;
-   left: 50%;
-   position: absolute;
-   margin-top:30px;
-   margin-left: -260px;
-   border-radius:7px;
-   -webkit-border-radius:7px;
-   -moz-border-radius:7px;
-}
-#contact-form input,   
-#contact-form select,   
-#contact-form textarea,   
-#contact-form label { 
-   font-size: 15px;  
-   margin-bottom: 2px;
-   font-family: Arial, san-serif;
-} 
-#contact-form input,   
-#contact-form select,   
-#contact-form textarea { 
-   width:100%;
-   background: #fff;
-   border: 0; 
-   -moz-border-radius: 4px;  
-   -webkit-border-radius: 4px;  
-   border-radius: 4px;
-   margin-bottom: 25px;  
-   padding: 5px;  
-}  
-#contact-form input:focus,   
-#contact-form select:focus,   
-#contact-form textarea:focus {  
-   background-color: #E5E6E7; 
-}  
-#contact-form textarea {
-   width:100%;
-   height: 150px;
-}
-#contact-form button[type="submit"] {
-   cursor:pointer;
-   width:100%;
-   border:none;
-   background:#991D57;
-   background-image:linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
-   background-image:-moz-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
-   background-image:-webkit-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
-   color:#FFF;
-   margin:0 0 5px;
-   padding:10px;
-   border-radius:5px;
-}
-#contact-form button[type="submit"]:hover {
-   background-image:linear-gradient(bottom, #9C215A 0%, #A82767 52%);
-   background-image:-moz-linear-gradient(bottom, #9C215A 0%, #A82767 52%);
-   background-image:-webkit-linear-gradient(bottom, #9C215A 0%, #A82767 52%);
-   -webkit-transition:background 0.3s ease-in-out;
-   -moz-transition:background 0.3s ease-in-out;
-   transition:background-color 0.3s ease-in-out;
-}
-#contact-form button[type="submit"]:active {
-   box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
-}
-input:required, textarea:required {  
-   box-shadow: none;
-   -moz-box-shadow: none;  
-   -webkit-box-shadow: none;  
-   -o-box-shadow: none;  
-} 
-#contact-form .required {  
-   font-weight:bold;  
-   color: #E5E6E7;      
-}
+  .mail-message-area{
+    width:100%;
+    padding:0 15px;
+  }
 
-/* Hide success/failure message
-   (especially since the php is missing) */
-#failure, #success {
-   color: #6EA070; 
-   display:none;  
-}
+  .mail-message{
+    width: 100%;
+    background:rgba(255,255,255, 0.8) !important;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    transition: all 0.7s;
+    margin:0 auto;
+    border-radius: 0;
+  }
 
-/* Make form look nice on smaller screens */
-@media only screen and (max-width: 580px) {
-   #contact-form{
-      left: 3%;
-      margin-right: 3%;
-      width: 88%;
-      margin-left: 0;
-      padding-left: 3%;
-      padding-right: 3%;
-   }
+  .not-visible-message{
+    height:0px;
+    opacity: 0;
+  }
+
+  .visible-message{
+    height:auto;
+    opacity: 1;
+    margin:25px auto 0;
+  }
+
+/* Input Styles */
+
+  .form{
+    width: 100%;
+    padding: 15px;
+    background:#f8f8f8;
+    border:1px solid rgba(0, 0, 0, 0.075);
+    margin-bottom:25px;
+    color:#727272 !important;
+    font-size:13px;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+
+  .form:hover{
+    border:1px solid #8BC3A3;
+  }
+
+  .form:focus{
+    color: white;
+    outline: none;
+    border:1px solid #8BC3A3;
+  }
+
+  .textarea{
+    height: 200px;
+    max-height: 200px;
+    max-width: 100%;
+  }
+  
+/* Generic Button Styles */
+
+  .button{
+    padding:8px 12px;
+    background:#0A5175;
+    display: block;
+    width:120px;
+    margin:10px 0 0px 0;
+    border-radius:3px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align:center;
+    font-size:0.8em;
+    box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  }
+
+  .button:hover{
+    background:#8BC3A3;
+    color:white;
+  }
+
+/* Send Button Styles */
+
+  .form-btn{
+    width:180px;
+    display: block;
+    height: auto;
+    padding:15px;
+    color:#fff;
+    background:#8BC3A3;
+    border:none;
+    border-radius:3px;
+    outline: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin:auto;
+    box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  }
+
+  .form-btn:hover{
+    background:#111;
+    color: white;
+    border:none;
+  }
+
+  .form-btn:active{
+    opacity: 0.9;
+  }
+center{
+  margin-top:330px;
+}
+input {
+    position: relative;
+    z-index: 9999;
 }
 </style>
  </body>
-<!-- 
-  ****************************************
-  Contest Entry for Treehouse:
-  "Design a Contact Form"
-  Submitted by Lisa Wagner
-  ****************************************
--->
+<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"></head>
+<br />
+<div class="inner contact">
+                <!-- Form Area -->
+                <div class="contact-form">
+                    <!-- Form -->
+                    <form id="contact-us" method="post" action="#">
+                        <!-- Left Inputs -->
+                        <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+                            <!-- Name -->
+                            <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
+                            <!-- Email -->
+                            <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
+                            <!-- Subject -->
+                            <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
+                        </div><!-- End Left Inputs -->
+                        <!-- Right Inputs -->
+                        <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+                            <!-- Message -->
+                            <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
+                        </div><!-- End Right Inputs -->
+                        <!-- Bottom Submit -->
+                        <div class="relative fullwidth col-xs-12">
+                            <!-- Send Button -->
+                            <button type="submit" id="submit" name="submit" class="form-btn semibold">Send Message</button> 
+                        </div><!-- End Bottom Submit -->
+                        <!-- Clear -->
+                        <div class="clear"></div>
+                    </form>
 
-<div id="contact-form">
-	<div>
-		<h1>Nice to Meet You!</h1> 
-		<h4>How can help you?</h4> 
-	</div>
-		<p id="failure">Oopsie...message not sent.</p>  
-		<p id="success">Your message was sent successfully. Thank you!</p>
+                    <!-- Your Mail Message -->
+                    <div class="mail-message-area">
+                        <!-- Message -->
+                        <div class="alert gray-bg mail-message not-visible-message">
+                            <strong>Thank You !</strong> Your email has been delivered.
+                        </div>
+                    </div>
 
-		   <form method="post" action="https://trb935.github.io/mynt/">
-			<div>
-		      <label for="name">
-		      	<span class="required">Name: *</span> 
-		      	<input type="text" id="name" name="name" value="" placeholder="Your Name" required="required" tabindex="1" autofocus="autofocus" />
-		      </label> 
-			</div>
-			<div>
-		      <label for="email">
-		      	<span class="required">Email: *</span>
-		      	<input type="email" id="email" name="email" value="" placeholder="Your Email" tabindex="2" required="required" />
-		      </label>  
-			</div>
-			<div>		          
-		      <label for="subject">
-		      <span>Subject: </span>
-			      <select id="subject" name="subject" tabindex="4">   
-			         <option value="hello">Subject</option>
-			         <option value="quote">Question - Suggestion</option>  
-			         <option value="general">- general questions - </option>
-			      </select>
-		      </label>
-			</div>
-			<div>		          
-		      <label for="message">
-		      	<span class="required">Message: *</span> 
-		      	<textarea id="message" name="message" placeholder="Please write your message here." tabindex="5" required="required"></textarea> 
-		      </label>  
-			</div>
-			<div>		           
-		      <button  name="submit" type="submit" id="submit"  >SEND</button> 
-			</div>
-		   </form>
+                </div><!-- End Contact Form Area -->
+            </div><!-- End Inner -->
 
-	</div>
 
+<center> Visit Developer's Website <a href="https://trb935.github.io/mynt/" target="blank">Shuvo Habib </a> </center>
 </html>
