@@ -1,99 +1,276 @@
+ 
+<!DOCTYPE html> 
+<html lang="en-US">
 
-<!DOCTYPE html>
-<!--[if lte IE 9]>
-<html class="ie" lang="en">
-<![endif]-->
-<!--[if gt IE 9]><!-->
-<html lang="en">
-
+<head>
+	<title>
+		How To Add Google Translate
+		Button On Your Webpage ?
+	</title>
+</head>
 
 <body>
 
 
+	
 
+	<div id="google_translate_element"></div>
 
+	<script type="text/javascript">
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement(
+				{pageLanguage: 'en'},
+				'google_translate_element'
+			);
+		}
+	</script>
 
-<style>
-
-body {
-  background: #333;
-  display: grid;
-  height: 70vh;
-  place-items: center;
-  width: 50%;
-}
-
-.email-links {
-  background: #fff;
-  border: 5px solid #222;
-  border-radius: 18px;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 2rem;
-  position: relative;
-  width: clamp(300px, 50%, 600px);
-}
-
-.email-links:before {
-  content: "";
-  background: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%);
-  border: 5px solid #222;
-  border-radius: 18px;
-  height: 100%;
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
-  width: 100%;
-  z-index: -1;
-}
-
-.email-link {
-  padding: 1rem;
-}
-
-.email-link:not(:last-child) {
-  border-right: 1px solid #ccc;
-}
-
-.email-link svg {
-  filter: drop-shadow(1px 0 5px hsla(170, 0%, 0%, 0.5));
-  margin-right: 10px;
-  position: relative;
-  top: 4px;
-}
-</style>
-
+	<script type="text/javascript"
+			src=
+"https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit">
+	</script>
 
 
 </body>
 
-<div class="email-links">
-  <div class="email-link">
-    <h2>Request - Question - Suggestion</h2>
-    <p>
-      <a href="mailto: developeragenmail@gmail.com">
-        <svg viewBox="0 0 512 512" width="20" fill="#ffffff" title="envelope">
-          <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" />
-        </svg>Email Us
-      </a>
-    </p>
-  </div>
-
-  <div class="email-link">
-    <h2>General questions</h2>
-    <p>
-      <a href="mailto: developeragentmail@gmail.com?subject=Mail from Our Site">
-        <svg viewBox="0 0 512 512" width="20" fill="#ffffff" title="envelope">
-          <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" />
-        </svg>Email Us
-      </a>
-    </p>
-  </div>
-
-
-  </div>
-</div>
-
-
 </html>
+
+<!DOCTYPE html>
+<html>
+
+<style>
+body {
+  background: RGBA(29, 20, 35, 1);
+  font-family: "ref";
+  -webkit-font-smoothing: antialiased;
+}
+main {
+  padding: 30px 15px;
+  text-align: center;
+  max-width: 100%;
+}
+h1 {
+  font-size: 1.1em;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 10px;
+background: black;
+  color: red;
+
+}
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+h2 {
+  margin: 0 0 50px;
+  font-size: 0.8em;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.6);
+
+  color: green;
+
+}
+h3 {
+  margin: 0 0 50px;
+  font-size: 0.8em;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.6);
+
+  color: green;
+
+}
+
+
+aside {
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(200deg, #27156e, #6a2a88, #9f4981);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+.open {
+  opacity: 1;
+  visibility: visible;
+}
+nav {
+  text-align: center;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      align-items: center;
+      flex: 1;
+      line-height: 20vh;
+      a {
+        font-size: 1.5em;
+        transition: all 0.5s ease;
+        display: block;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.5);
+        &:hover {
+          color: rgba(255, 255, 255, 0.9);
+          transform: scale(1.1);
+          &:before {
+            visibility: visible;
+            transform: scaleX(1);
+          }
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          width: 50%;
+          height: 2px;
+          bottom: 0;
+          left: 25%;
+          background: white;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all 0.3s ease-in-out 0s;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 400px) {
+  nav ul li a {
+    font-size: 3em;
+  }
+}
+button {
+  padding: 15px 40px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+}
+.close {
+  position: fixed;
+  top: 40px;
+  right: 60px;
+  color: white;
+  z-index: 3;
+  cursor: pointer;
+  font-family: sans-serif;
+  span,
+  span:before,
+  span:after {
+    border-radius: 4px;
+    height: 5px;
+    width: 35px;
+    background: white;
+    position: absolute;
+    display: block;
+    content: "";
+  }
+  span {
+    background: transparent;
+  }
+  span:before {
+    transform: rotate(45deg);
+  }
+  span:after {
+    transform: rotate(-45deg);
+  }
+}
+.outer-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 85px;
+  height: 85px;
+  cursor: pointer;
+}
+
+
+</style>
+
+</body>
+<main>
+  <h1>Complete the activation process.</h1>
+  <h2 >Choose a method.
+Verify the payment with the method you choose, your registered e-mail address and account will be active for 365 days and you will have unlimited usage rights. </h2>
+<h3>This section will not be displayed automatically after the payment verification process.
+The verification process takes place in less than 1 minute after making the payment.</h3>
+</main>
+
+
+<aside>
+  <div class="outer-close toggle-overlay">
+    <a class="close"><span></span></a>
+  </div>
+  <nav>
+    <ul>
+     
+    </ul>
+  </nav>
+</aside>
+<script>
+(function($) {
+  $(function() {
+    $('.toggle-overlay').click(function() {
+      $('aside').toggleClass('open');
+    });
+  });
+})(jQuery);
+
+</script>
+</html>
+
+
+
+
+
+
+
+<A HREF="https://perfectmoney.com/api/pay.asp?acc=U30353829&cur=1&name=Activation pack - Predictor&email=thimblesh@gmail.com&amount=100&memo=Verified payment"><IMG SRC="http://perfectmoney.com/img/88-31-11.png" BORDER="0" ALT="Perfect Money" width="120" height="90"></A>
+
+<input type="image" name="imgbtn"  onclick="location.href='https://trb935.github.io/pyr.index.html/';"
+	src="https://i.ibb.co/rby3nsD/images.jpg" width="120" height="90"  alt="Payeer Wallet">
+
+
+
+
+
+
+
+
+<form action="https://www.coinpayments.net/index.php" method="post">
+	<input type="hidden" name="cmd" value="_pay">
+	<input type="hidden" name="reset" value="1">
+	<input type="hidden" name="merchant" value="91722745f2049391e4ec5ca845727bae">
+	<input type="hidden" name="item_name" value="Predictor Activation .">
+	<input type="hidden" name="item_number" value="1">
+	<input type="hidden" name="currency" value="USD">
+	<input type="hidden" name="amountf" value="100.00000000">
+	<input type="hidden" name="quantity" value="1">
+	<input type="hidden" name="allow_quantity" value="0">
+	<input type="hidden" name="want_shipping" value="1">
+	<input type="hidden" name="success_url" value="https://aviatorpredictor.net/">
+	<input type="hidden" name="cancel_url" value="https://aviatorpredictor.net/">
+	<input type="hidden" name="allow_extra" value="0">
+	<input type="image" src="https://www.coinpayments.net/images/pub/buynow-blue.png" alt="Buy Now with CoinPayments.net">
+</form>
+
+
+<div id='wm-widget' style='width: 200px;height: 50px;'></div>
+
+
+
+
